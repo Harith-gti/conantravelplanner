@@ -3,7 +3,7 @@
 A responsive travel planning web app built for **IMS566 Advanced Web Design Development and Content Management**.
 This website is NOT the official website of Conan Travel Planner. It was developed strictly for learning purposes (IMS 566).
 
-- **Live website (GitHub Pages):** _paste your link here, e.g. https://username.github.io/conan-travel-planner/_
+- **Live website (GitHub Pages): https://harith-gti.github.io/conantravelplanner/
 - **GitHub repository:** _paste your repository link here_
 
 ## Features

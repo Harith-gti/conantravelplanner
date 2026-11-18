@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Log in or register for Conan Travel Planner, an IMS566 learning project.">
+<meta name="keywords" content="login, register, travel planner">
+<meta name="author" content="Muhammad Harith Iqbal">
+<title>Login | Conan Travel Planner</title>
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon.png">
+<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+<script>document.documentElement.dataset.bsTheme=localStorage.getItem("cx_theme")||"light";</script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body class="auth-body">
+<main class="auth-wrap">
+ <section class="auth-shell">
+  <!-- Left: brand panel (hidden on small phones) -->
+  <div class="auth-brand d-none d-md-flex">
+   <span class="logo mb-3"><i class="fa-solid fa-earth-asia"></i></span>
+   <h1 class="h3 fw-bold text-white">Conan Travel Planner</h1>
+   <p class="opacity-75">Your journey, your way.</p>
+  </div>
+  <!-- Right: forms -->
+  <div class="auth-card">
+   <div class="d-md-none text-center mb-3"><span class="logo"><i class="fa-solid fa-earth-asia"></i></span><p class="h5 fw-bold mt-2 mb-0">Conan Travel Planner</p></div>
+   <div class="nav nav-pills nav-fill mb-3">
+    <button class="nav-link active" id="tabLogin" data-bs-toggle="pill" data-bs-target="#paneLogin" type="button">Login</button>
+    <button class="nav-link" id="tabReg" data-bs-toggle="pill" data-bs-target="#paneReg" type="button">Register</button>
+    <button class="nav-link d-none" id="tabReset" data-bs-toggle="pill" data-bs-target="#paneReset" type="button" tabindex="-1" aria-hidden="true" aria-label="Reset password"></button>
+   </div>
+   <div class="tab-content">
+    <!-- Login -->
+    <form class="tab-pane fade show active" id="paneLogin" novalidate>
+     <h2 class="h5 fw-bold mb-3">Welcome back</h2>
+     <div id="lOk" class="alert alert-success py-2 small d-none"></div>
+     <div id="lErr" class="alert alert-danger py-2 small d-none"></div>
+     <label class="form-label small fw-semibold" for="lUser">Username</label>
+     <div class="input-group mb-3"><span class="input-group-text"><i class="fa-solid fa-user"></i></span><input id="lUser" type="text" class="form-control" autocomplete="username"></div>
+     <label class="form-label small fw-semibold" for="lPass">Password</label>
+     <div class="input-group mb-3"><span class="input-group-text"><i class="fa-solid fa-lock"></i></span><input id="lPass" type="password" class="form-control" autocomplete="current-password"><button class="btn btn-outline-secondary eye" type="button" data-t="lPass" aria-label="Show password"><i class="fa-regular fa-eye"></i></button></div>
+     <div class="d-flex justify-content-between mb-3 small"><div class="form-check"><input class="form-check-input" type="checkbox" id="remember"><label class="form-check-label" for="remember">Remember me</label></div><button type="button" class="btn btn-link btn-sm p-0" id="toReset">Forgot password?</button></div>
+     <button class="btn btn-primary w-100 rounded-pill">Login</button>
+     <div class="demo-box mt-3 d-flex justify-content-between align-items-center gap-2"><span><strong>Demo account</strong><br>Username <code>demo</code> / Password <code>Demo@1234</code></span><button type="button" class="btn btn-sm btn-outline-primary rounded-pill" id="useDemo">Use</button></div>
+    </form>
+    <!-- Register: username and password only -->
+    <form class="tab-pane fade" id="paneReg" novalidate>
+     <h2 class="h5 fw-bold mb-3">Create account</h2>
+     <div id="rErr" class="alert alert-danger py-2 small d-none"></div>
+     <label class="form-label small fw-semibold" for="rUser">Username</label>
+     <div class="input-group mb-1"><span class="input-group-text"><i class="fa-solid fa-user"></i></span><input id="rUser" type="text" class="form-control" placeholder="3 to 20 letters, numbers or _" autocomplete="username"></div>
+     <div class="mb-3"></div>
+     <label class="form-label small fw-semibold" for="rPass">Password</label>
+     <div class="input-group mb-3"><span class="input-group-text"><i class="fa-solid fa-lock"></i></span><input id="rPass" type="password" class="form-control" placeholder="8+ characters with a number" autocomplete="new-password"><button class="btn btn-outline-secondary eye" type="button" data-t="rPass" aria-label="Show password"><i class="fa-regular fa-eye"></i></button></div>
+     <label class="form-label small fw-semibold" for="rConf">Confirm password</label>
+     <div class="input-group mb-3"><span class="input-group-text"><i class="fa-solid fa-lock"></i></span><input id="rConf" type="password" class="form-control" autocomplete="new-password"><button class="btn btn-outline-secondary eye" type="button" data-t="rConf" aria-label="Show password"><i class="fa-regular fa-eye"></i></button></div>
+     <button class="btn btn-primary w-100 rounded-pill">Create account</button>
+     <p class="form-text text-center mt-2 mb-0">New accounts start empty, with no sample data.</p>
+    </form>
+    <!-- Forgot password (simulated) -->
+    <form class="tab-pane fade" id="paneReset" novalidate>
+     <h2 class="h5 fw-bold mb-1">Reset password</h2>
+     <p class="small text-muted">Enter your username and choose a new password.</p>
+     <div id="pErr" class="alert alert-danger py-2 small d-none"></div>
+     <label class="form-label small fw-semibold" for="pUser">Username</label>
+     <div class="input-group mb-3"><span class="input-group-text"><i class="fa-solid fa-user"></i></span><input id="pUser" type="text" class="form-control"></div>
+     <label class="form-label small fw-semibold" for="pPass">New password</label>
+     <div class="input-group mb-3"><span class="input-group-text"><i class="fa-solid fa-lock"></i></span><input id="pPass" type="password" autocomplete="new-password" class="form-control" placeholder="8+ characters with a number"><button class="btn btn-outline-secondary eye" type="button" data-t="pPass" aria-label="Show password"><i class="fa-regular fa-eye"></i></button></div>
+     <label class="form-label small fw-semibold" for="pConf">Confirm new password</label>
+     <div class="input-group mb-3"><span class="input-group-text"><i class="fa-solid fa-lock"></i></span><input id="pConf" type="password" autocomplete="new-password" class="form-control"><button class="btn btn-outline-secondary eye" type="button" data-t="pConf" aria-label="Show password"><i class="fa-regular fa-eye"></i></button></div>
+     <button class="btn btn-primary w-100 rounded-pill">Reset password</button>
+     <button type="button" class="btn btn-link btn-sm w-100 mt-2" id="toLogin"><i class="fa-solid fa-arrow-left me-1"></i>Back to login</button>
+    </form>
+   </div>
+  </div>
+ </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/config.js"></script>
+<script src="js/cloud.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

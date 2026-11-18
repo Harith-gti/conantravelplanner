@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Keep a dream list of places you want to visit, and get destination ideas and hidden gems.">
+<meta name="keywords" content="destinations, dream list, hidden gems, bucket list">
+<meta name="author" content="Muhammad Harith Iqbal">
+<title>Destinations | Conan Travel Planner</title>
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon.png">
+<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+<script>/* Apply the saved theme before the page paints, and send visitors who are not logged in to the login page */
+document.documentElement.dataset.bsTheme=localStorage.getItem("cx_theme")||"light";
+if(!(localStorage.getItem("cx_session")||sessionStorage.getItem("cx_session")))location.replace("login.html");</script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<!-- The navigation bar and footer are inserted by js/layout.js, so every page shares the same ones -->
+<main class="container-xl py-4" id="view"><noscript>Please enable JavaScript to use this page.</noscript></main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/config.js"></script>
+<script src="js/cloud.js"></script>
+<script src="js/core.js"></script>
+<script src="js/data.js"></script>
+<script src="js/destinations.js"></script>
+</body>
+</html>
